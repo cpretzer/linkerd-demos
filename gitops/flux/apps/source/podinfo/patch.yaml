@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
         - name: podinfod
-          image: ghcr.io/stefanprodan/podinfo:5.2.1
+          image: ghcr.io/stefanprodan/podinfo:5.2.0
           securityContext:
             runAsUser: 1337
           env:
