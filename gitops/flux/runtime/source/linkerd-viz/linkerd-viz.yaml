@@ -480,6 +480,7 @@ spec:
   - name: http
     port: 8085
     targetPort: 8085
+    protocol: TCP
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -660,6 +661,7 @@ spec:
   - name: http
     port: 3000
     targetPort: 3000
+    protocol: TCP
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -943,6 +945,7 @@ spec:
   - name: admin-http
     port: 9090
     targetPort: 9090
+    protocol: TCP
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -1046,9 +1049,11 @@ spec:
   - name: grpc
     port: 8088
     targetPort: 8088
+    protocol: TCP
   - name: apiserver
     port: 443
     targetPort: apiserver
+    protocol: TCP
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -1253,6 +1258,7 @@ spec:
   - name: tap-injector
     port: 443
     targetPort: tap-injector
+    protocol: TCP
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -1377,9 +1383,11 @@ spec:
   - name: http
     port: 8084
     targetPort: 8084
+    protocol: TCP
   - name: admin-http
     port: 9994
     targetPort: 9994
+    protocol: TCP
 ---
 apiVersion: apps/v1
 kind: Deployment
