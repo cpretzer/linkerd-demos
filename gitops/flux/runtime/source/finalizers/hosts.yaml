@@ -2,6 +2,7 @@ apiVersion: getambassador.io/v2
 kind: Host
 metadata:
   name: dashboard
+  namespace: linkerd-viz
 spec:
   hostname: "dashboard.kcna21.linkerd.io"
   acmeProvider:

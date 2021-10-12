@@ -3,6 +3,7 @@ apiVersion: getambassador.io/v2
 kind: Host
 metadata:
   name: podinfo
+  namespace: podinfo
 spec:
   hostname: "podinfo.kcna21.linkerd.io"
   acmeProvider:

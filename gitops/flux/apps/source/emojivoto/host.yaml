@@ -3,7 +3,8 @@ apiVersion: getambassador.io/v2
 kind: Host
 metadata:
   name: emojivoto
+  namespace: emojivoto
 spec:
-  hostname: "emojivoto.civo.59s.io"
+  hostname: "emojivoto.kcna21.linkerd.io"
   acmeProvider:
-    email: jmorgan@f9vs.com
+    email: charles@buoyant.io
