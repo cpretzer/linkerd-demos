@@ -33,9 +33,9 @@ spec:
                     linkerd.io/inject: enabled
   install:
     crds: CreateReplace
+    remediation:
+      retries: -1
   upgrade:
     crds: CreateReplace
-  upgradeRemediation:
-    retries: -1
-  installRemediation:
-    retries: -1
+    remediation:
+      retries: -1
