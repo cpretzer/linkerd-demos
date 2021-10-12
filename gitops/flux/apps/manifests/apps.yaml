@@ -60,36 +60,36 @@ spec:
       kind: Deployment
       name: voting
       namespace: emojivoto
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: booksapp
-  namespace: flux-system
-spec:
-  interval: 1m0s
-  path: ./gitops/flux/apps/source/booksapp
-  dependsOn:
-    - name: finalizers
-  prune: true
-  sourceRef:
-    kind: GitRepository
-    name: gitops
-  validation: client
-  healthChecks:
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: traffic
-      namespace: booksapp
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: webapp
-      namespace: booksapp
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: authors
-      namespace: booksapp
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: books
-      namespace: booksapp
+# ---
+# apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+# kind: Kustomization
+# metadata:
+#   name: booksapp
+#   namespace: flux-system
+# spec:
+#   interval: 1m0s
+#   path: ./gitops/flux/apps/source/booksapp
+#   dependsOn:
+#     - name: finalizers
+#   prune: true
+#   sourceRef:
+#     kind: GitRepository
+#     name: gitops
+#   validation: client
+#   healthChecks:
+#     - apiVersion: apps/v1
+#       kind: Deployment
+#       name: traffic
+#       namespace: booksapp
+#     - apiVersion: apps/v1
+#       kind: Deployment
+#       name: webapp
+#       namespace: booksapp
+#     - apiVersion: apps/v1
+#       kind: Deployment
+#       name: authors
+#       namespace: booksapp
+#     - apiVersion: apps/v1
+#       kind: Deployment
+#       name: books
+#       namespace: booksapp

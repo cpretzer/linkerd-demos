@@ -1,0 +1,37 @@
+---
+apiVersion: getambassador.io/v2
+kind: Mapping
+metadata:
+  name: webhook-receiver
+  namespace: flux-system
+spec:
+  prefix: /
+  service: webhook-receiver.flux-system:80
+  rewrite: ""
+  host: flux-webhook.kcna21.linkerd.io
+---  
+apiVersion: notification.toolkit.fluxcd.io/v1beta1
+kind: Receiver
+metadata:
+  name: webapp
+  namespace: flux-system
+spec:
+  type: github
+  events:
+    - "ping"
+    - "push"
+  secretRef:
+    name: webhook-token
+  resources:
+    - kind: GitRepository
+      name: gitops
+---
+apiVersion: getambassador.io/v2
+kind: Host
+metadata:
+  name: flux-webhook
+  namespace: flux-system
+spec:
+  hostname: "flux-webhook.kcna21.linkerd.io"
+  acmeProvider:
+    email: charles@buoyant.io      
