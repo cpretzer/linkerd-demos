@@ -26,6 +26,7 @@ spec:
               name: ambassador-edge-stack
               namespace: ambassador
             spec:
+              replicas: 1
               template:
                 metadata:
                   annotations:
