@@ -8,4 +8,4 @@ spec:
   prefix: /
   service: frontend.podinfo:8080
   rewrite: ""
-  host: kcna-2021.podinfo.linkerd.io
+  host: podinfo.kcna21.linkerd.io

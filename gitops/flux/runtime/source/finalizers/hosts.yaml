@@ -3,6 +3,6 @@ kind: Host
 metadata:
   name: dashboard
 spec:
-  hostname: "kcna-2021.dashboard.linkerd.io"
+  hostname: "dashboard.kcna21.linkerd.io"
   acmeProvider:
     email: charles@buoyant.io
