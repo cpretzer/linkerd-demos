@@ -1462,6 +1462,7 @@ spec:
   - name: grpc
     port: 8080
     targetPort: 8080
+    protocol: TCP
 ---
 kind: Service
 apiVersion: v1
@@ -1481,6 +1482,7 @@ spec:
   - name: grpc
     port: 8080
     targetPort: 8080
+    protocol: TCP
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -1740,6 +1742,7 @@ spec:
   - name: grpc
     port: 8086
     targetPort: 8086
+    protocol: TCP
 ---
 kind: Service
 apiVersion: v1
@@ -1759,6 +1762,7 @@ spec:
   - name: grpc
     port: 8086
     targetPort: 8086
+    protocol: TCP
 ---
 kind: Service
 apiVersion: v1
@@ -1778,6 +1782,7 @@ spec:
   - name: sp-validator
     port: 443
     targetPort: sp-validator
+    protocol: TCP
 ---
 kind: Service
 apiVersion: v1
@@ -1797,6 +1802,7 @@ spec:
   - name: grpc
     port: 8090
     targetPort: 8090
+    protocol: TCP
 ---
 kind: Service
 apiVersion: v1
@@ -1816,6 +1822,7 @@ spec:
   - name: policy-https
     port: 443
     targetPort: policy-https
+    protocol: TCP
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -2426,6 +2433,7 @@ spec:
   - name: proxy-injector
     port: 443
     targetPort: proxy-injector
+    protocol: TCP
 ---
 apiVersion: v1
 data:
