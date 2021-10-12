@@ -35,3 +35,7 @@ spec:
     crds: CreateReplace
   upgrade:
     crds: CreateReplace
+  upgradeRemediation:
+    retries: -1
+  installRemediation:
+    retries: -1
